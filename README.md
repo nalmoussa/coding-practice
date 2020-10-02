@@ -1,2 +1,2 @@
-# coding-practice
-Data structures and algorithms practices (Mostly Java) 
+# Coding Practice
+Data structures and algorithms practices 
