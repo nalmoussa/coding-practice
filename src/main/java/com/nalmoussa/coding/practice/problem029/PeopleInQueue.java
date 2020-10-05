@@ -49,7 +49,7 @@ public class PeopleInQueue {
       // swap with the person standing at current index
       swap(processArray, i, next);
 
-      // reduce K for remaining people
+      // reduce K (if needed) for remaining people
       for (int j = i + 1; j < processArray.length; j++) {
         if (processArray[i][H] >= processArray[j][H]) {
           processArray[j][K]--;
