@@ -1,4 +1,4 @@
-package com.nalmoussa.coding.practice.problem40;
+package com.nalmoussa.coding.practice.problem040;
 
 /*
 Your students are getting craftier and hiding words in 2D grids of letters. The word may start anywhere in the grid, and consecutive letters can be either immediately below or immediately to the right of the previous letter.
