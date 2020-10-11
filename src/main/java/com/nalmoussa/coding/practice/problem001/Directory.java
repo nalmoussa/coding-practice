@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Directory {
-  private String path;
+  private final String path;
   Map<String, String> files;
   Map<String, Directory> directories;
 

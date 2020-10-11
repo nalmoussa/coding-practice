@@ -144,6 +144,7 @@ public class CalendarManager {
       availableTimesAsList.add(availableTime);
     }
   }
+
   private static int[] joinOverlappingIntervals(int[] leftInterval, int[] rightInterval) {
     int[] interval = new int[2];
     interval[START] = leftInterval[START];
