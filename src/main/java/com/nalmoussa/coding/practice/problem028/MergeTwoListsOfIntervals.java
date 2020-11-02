@@ -61,12 +61,7 @@ public class MergeTwoListsOfIntervals {
         }
         intervalList.add(currentInterval);
 
-        int length = intervalList.size();
-        int[][] mergedIntervals = new int[length][2];
-        for (int i = 0; i < length; i++) {
-            mergedIntervals[i] = intervalList.get(i);
-        }
-        return mergedIntervals;
+        return intervalList.toArray(int[][]::new);
     }
 
     private static int[] join(int[] interval1, int[] interval2) {

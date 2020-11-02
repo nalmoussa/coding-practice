@@ -128,12 +128,7 @@ public class CalendarManager {
     addAvailableTime(availableTimesAsList, start, currentMeeting[START]);
     addAvailableTime(availableTimesAsList, currentMeeting[END], 2400);
 
-    int length = availableTimesAsList.size();
-    int[][] availableTimes = new int[length][2];
-    for (int i = 0; i < length; i++) {
-      availableTimes[i] = availableTimesAsList.get(i);
-    }
-    return availableTimes;
+    return availableTimesAsList.toArray(int[][]::new);
   }
 
   private static void addAvailableTime(List<int[]> availableTimesAsList, int start, int end) {

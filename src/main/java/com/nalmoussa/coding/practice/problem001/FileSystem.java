@@ -3,7 +3,7 @@ package com.nalmoussa.coding.practice.problem001;
 import java.util.Arrays;
 
 public class FileSystem {
-  private Directory root;
+  private final Directory root;
 
   public FileSystem() {
     this.root = new Directory("/");
@@ -57,9 +57,9 @@ public class FileSystem {
   }
 
   private static String[] getDirectoryNames(String path) {
-    return (String[])Arrays.stream(path.split("/"))
+    return Arrays.stream(path.split("/"))
         .filter(name -> !name.isEmpty())
-        .toArray();
+        .toArray(String[]::new);
   }
 
   private static String createNewPath(String existingPath, String newPath) {
@@ -80,6 +80,9 @@ public class FileSystem {
     fileSystem.mkdir("/a//b//c/");
     fileSystem.mkdir("/a/b1/c/");
     fileSystem.mkdir("/a/b/c/d");
+
+    fileSystem.addContentToFile("/a/b/c/example.txt", "Hello World!");
+    System.out.println(fileSystem.readContentFromFile("/a/b/c/example.txt"));
   }
 }
 

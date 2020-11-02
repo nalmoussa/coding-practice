@@ -12,13 +12,13 @@ public class EditDistance {
 
         boolean sameLength = s1.length() == s2.length();
         if (sameLength) {
-            result = oneEditApart(s1, s2, 1, 1);
+            result = oneEditApart(s1, s2, 1);
         }
         else {
             boolean firstIsShorter = s1.length() < s2.length();
             String shortString = (firstIsShorter) ? s1 : s2;
             String longString  = (firstIsShorter) ? s2 : s1;
-            result = oneEditApart(shortString, longString, 0, 1);
+            result = oneEditApart(shortString, longString, 0);
         }
         return result;
     }
@@ -37,13 +37,12 @@ public class EditDistance {
         return i;
     }
 
-    private static boolean oneEditApart(String s1, String s2, int step1, int step2) {
+    private static boolean oneEditApart(String s1, String s2, int offset) {
         boolean result = true;
         int i = findIndexOfFirstDiff(s1, s2);
         if (i < s1.length()) {
-            result = compareEqualityOfSubStrings(s1, s2, i + step1, i + step2);
+            result = compareEqualityOfSubStrings(s1, s2, i + offset, i + 1);
         }
         return result;
     }
-
 }

@@ -10,12 +10,11 @@ class NumberOfAtoms {
         treeMap = new TreeMap<>();
     }
 
-    NumberOfAtoms add(String atom, Integer count) {
+    void add(String atom, Integer count) {
         treeMap.put(atom, count);
-        return this;
     }
 
-    NumberOfAtoms add(NumberOfAtoms numberOfAtoms) {
+    void add(NumberOfAtoms numberOfAtoms) {
         String atom;
         Integer count;
         for (Map.Entry<String, Integer> entry : numberOfAtoms.treeMap.entrySet()) {
@@ -26,7 +25,6 @@ class NumberOfAtoms {
             }
             treeMap.put(atom, count);
         }
-        return this;
     }
 
     NumberOfAtoms multiplyBy(Integer multiplier) {

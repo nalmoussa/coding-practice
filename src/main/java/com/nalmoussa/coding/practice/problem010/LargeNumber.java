@@ -88,10 +88,9 @@ class LargeNumber {
         return this;
     }
 
-    private LargeNumber shiftToTheRight(int offset) {
+    private void shiftToTheRight(int offset) {
         number = "0".repeat(Math.max(0, offset)) +
             number;
-        return this;
     }
 
     LargeNumber add(LargeNumber other) {
