@@ -1,6 +1,5 @@
 package com.nalmoussa.coding.practice.problem023;
 
-import com.nalmoussa.coding.practice.problem023.Randomness;
 import org.junit.Assert;
 import org.junit.Test;
 

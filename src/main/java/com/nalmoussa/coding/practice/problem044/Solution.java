@@ -1,7 +1,6 @@
 package com.nalmoussa.coding.practice.problem044;
 
 /*
-
 Implement a system that when given a value of currency and denominations of coins will calculate the
 minimum number of coins to dispense to make change.
 
